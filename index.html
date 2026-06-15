@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Aditya Sapkota | Cybersecurity Researcher &amp; Cloud Engineer</title>
   <meta name="description" content="Graduate researcher at the UND Center for Cyber Security Research. MS Computer Science student specializing in federated learning, anomaly detection, and edge infrastructure security. Former cloud engineer at RapidCircle.">
   <meta name="author" content="Aditya Sapkota">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#fbfcfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Aditya Sapkota | Cybersecurity Researcher &amp; Cloud Engineer">
   <meta property="og:description" content="Graduate researcher at UND studying federated learning and anomaly detection for edge security. Former cloud engineer at RapidCircle (Microsoft 365, Azure).">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://adityasapkota.github.io">
+  <meta property="og:site_name" content="Aditya Sapkota">
   <meta property="og:image" content="https://adityasapkota.github.io/assets/image/aditya-pp.png">
+  <meta property="og:image:alt" content="Aditya Sapkota">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
@@ -21,6 +26,7 @@
   <meta name="twitter:image" content="https://adityasapkota.github.io/assets/image/aditya-pp.png">
 
   <link rel="canonical" href="https://adityasapkota.github.io">
+  <link rel="shortcut icon" href="assets/image/aditya-pp.png">
 
   <script type="application/ld+json">
   {
@@ -28,16 +34,24 @@
     "@type": "Person",
     "name": "Aditya Sapkota",
     "jobTitle": "Graduate Research Assistant",
+    "description": "MS Computer Science student and graduate researcher specializing in federated learning, anomaly detection, and edge infrastructure security. Former cloud engineer.",
+    "image": "https://adityasapkota.github.io/assets/image/aditya-pp.png",
+    "url": "https://adityasapkota.github.io",
+    "email": "asapkota79@outlook.com",
     "worksFor": {
       "@type": "Organization",
       "name": "University of North Dakota, Center for Cyber Security Research"
     },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of North Dakota"
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of North Dakota" },
+      { "@type": "CollegeOrUniversity", "name": "Tribhuvan University" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Columbia",
+      "addressRegion": "SC",
+      "addressCountry": "US"
     },
-    "url": "https://adityasapkota.github.io",
-    "email": "asapkota79@outlook.com",
     "sameAs": [
       "https://www.linkedin.com/in/adityasapkota/",
       "https://scholar.google.com/citations?user=67nh_tsAAAAJ&hl=en",
@@ -47,710 +61,503 @@
   }
   </script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="shortcut icon" href="assets/image/aditya-pp.png">
-
-  <style>
-    body {
-      background: #eef2f7;
-    }
-    .page-wrapper {
-      background: #ffffff;
-      max-width: 1060px;
-      margin: 28px auto !important;
-      border: 2px solid #0b5394;
-      border-radius: 10px;
-      box-shadow: 0 4px 24px rgba(11,83,148,0.10);
-      padding: 28px 32px !important;
-    }
-    /* Sticky nav */
-    .main-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.97) !important;
-      backdrop-filter: blur(6px);
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(11,83,148,0.09);
-      margin: 0 -4px;
-    }
-    /* Profile header */
-    .profile-name {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #0b5394;
-      margin-bottom: 8px;
-      line-height: 1.1;
-    }
-    .profile-name a { color: inherit; text-decoration: none; }
-    .profile-role {
-      font-size: 14.5px;
-      color: #333;
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-    .profile-role a { color: #0b5394; font-weight: 500; }
-    .profile-role strong { color: #1a1a1a; }
-    .profile-meta {
-      font-size: 13.5px;
-      color: #666;
-      margin-top: 10px;
-    }
-    .profile-meta i { color: #0b5394; width: 14px; }
-    .profile-links {
-      margin-top: 12px;
-      font-size: 14.5px;
-    }
-    .profile-links a {
-      margin-right: 4px;
-      color: #0b5394;
-    }
-    /* Profile photo */
-    .profile-photo img {
-      width: 82%;
-      float: right;
-      border: 3px solid #0b5394;
-      border-radius: 50%;
-      box-shadow: 0 4px 18px rgba(11,83,148,0.18);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .profile-photo img:hover {
-      box-shadow: 0 8px 28px rgba(11,83,148,0.28);
-      transform: scale(1.02);
-    }
-    @media (max-width: 767px) {
-      .profile-photo img {
-        width: 46%;
-        float: none;
-        margin: 0 auto 14px auto;
-        display: block;
+  <!-- Set theme before paint to avoid flash. Order: ?theme= override > saved choice > OS preference -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var t;
+      try {
+        var q = (location.search.match(/[?&]theme=(dark|light)/) || [])[1];
+        t = q || localStorage.getItem('theme');
+      } catch (e) {}
+      if (!t) {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
-      .page-wrapper { padding: 16px 14px !important; }
-    }
-    /* About section */
-    .about-text {
-      font-size: 16.5px;
-      line-height: 1.7;
-      color: #2a2a2a;
-      max-width: 840px;
-    }
-    .about-text p { margin-bottom: 14px; }
-    /* Interest pills */
-    .interest-pill {
-      display: inline-block;
-      background: #e8f0fa;
-      color: #0b5394;
-      border: 1px solid #c2d9f0;
-      border-radius: 20px;
-      padding: 5px 14px;
-      margin: 4px 4px 4px 0;
-      font-size: 13.5px;
-      font-weight: 500;
-    }
-    /* Section blocks */
-    .section-block { padding: 18px 0 10px; }
-    /* Education cards */
-    .edu-entry {
-      padding: 14px 0 14px 16px;
-      border-left: 4px solid #0b5394;
-      margin-bottom: 14px;
-    }
-    .edu-degree {
-      font-size: 16px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 3px;
-    }
-    .edu-school {
-      font-size: 14.5px;
-      color: #0b5394;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-    .edu-date {
-      font-size: 13px;
-      color: #777;
-      margin-bottom: 4px;
-    }
-    .edu-note {
-      font-size: 13.5px;
-      color: #444;
-      margin-top: 4px;
-    }
-    /* Experience cards */
-    .entry-card {
-      border-left: 4px solid #0b5394;
-      padding: 16px 20px;
-      margin: 12px 0;
-      background: #f7faff;
-      border-radius: 0 10px 10px 0;
-      box-shadow: 0 1px 6px rgba(11,83,148,0.07);
-      transition: box-shadow 0.18s, transform 0.18s;
-    }
-    .entry-card:hover {
-      box-shadow: 0 5px 18px rgba(11,83,148,0.13);
-      transform: translateX(3px);
-    }
-    .entry-card .job-title {
-      font-size: 16.5px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 2px;
-    }
-    .entry-card .job-org {
-      font-size: 14px;
-      color: #0b5394;
-      font-weight: 500;
-      margin-bottom: 3px;
-    }
-    .entry-card .job-date {
-      font-size: 12.5px;
-      color: #888;
-      margin-bottom: 10px;
-    }
-    .entry-card ul {
-      margin-bottom: 8px;
-      padding-left: 18px;
-    }
-    .entry-card ul li {
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 5px;
-      line-height: 1.55;
-    }
-    .entry-tech {
-      margin-top: 8px;
-      font-size: 12.5px;
-      color: #666;
-      background: #eef4fc;
-      border-radius: 6px;
-      padding: 5px 10px;
-      display: inline-block;
-    }
-    /* Publications */
-    .pub-entry {
-      padding: 14px 0;
-      border-bottom: 1px solid #eaeaea;
-    }
-    .pub-entry:last-child { border-bottom: none; }
-    .pub-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: #1a1a1a;
-      line-height: 1.4;
-      margin-bottom: 5px;
-    }
-    .pub-authors {
-      font-size: 13.5px;
-      color: #555;
-      margin-bottom: 3px;
-    }
-    .pub-venue {
-      font-size: 13px;
-      color: #777;
-      font-style: italic;
-    }
-    .pub-badge {
-      display: inline-block;
-      background: #fff8e1;
-      color: #8a6d1a;
-      border: 1px solid #ffd96a;
-      border-radius: 4px;
-      font-size: 11px;
-      padding: 1px 7px;
-      margin-left: 8px;
-      vertical-align: middle;
-      font-style: normal;
-    }
-    .scholar-summary {
-      font-size: 14px;
-      color: #666;
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    .scholar-summary a { color: #0b5394; }
-    /* Skill badges */
-    .skill-group { margin-bottom: 18px; }
-    .skill-group-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: #999;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .skill-badge {
-      display: inline-block;
-      background: #e8f0fa;
-      color: #0b5394;
-      border: 1px solid #c2d9f0;
-      border-radius: 20px;
-      padding: 4px 12px;
-      margin: 3px 3px 3px 0;
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.15s, color 0.15s;
-    }
-    .skill-badge:hover {
-      background: #0b5394;
-      color: #fff;
-    }
-    /* Cert items */
-    .cert-item {
-      display: flex;
-      align-items: flex-start;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 14px;
-    }
-    .cert-item:last-child { border-bottom: none; }
-    .cert-icon {
-      color: #0b5394;
-      width: 22px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    /* Footer */
-    .site-footer {
-      background: #0b5394;
-      border-radius: 0 0 8px 8px;
-      padding: 10px 20px;
-      text-align: center;
-      color: #fff;
-      font-size: 13px;
-      margin: 16px -32px -28px -32px;
-    }
-    .site-footer a { color: #cde; }
-    .site-footer a:hover { color: #fff; }
-    @media (max-width: 767px) {
-      .site-footer { margin: 16px -14px -16px -14px; }
-    }
-  </style>
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="page-wrapper" id="page-wrapper">
 
-  <!-- Header -->
-  <header>
-    <div class="row align-items-center">
-      <div class="col-md-9 col-12">
-        <h1 class="profile-name"><a href="index.html">Aditya Sapkota</a></h1>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-        <div class="profile-role">
-          <strong>Graduate Research Assistant,</strong>
-          <a href="https://und.edu/research/cyber-security/" target="_blank">Center for Cyber Security Research, University of North Dakota</a>
-        </div>
-        <div class="profile-role">
-          <strong>AI &amp; Technology Intern,</strong>
-          <a href="https://ndsbdc.org" target="_blank">ND Small Business Development Center</a>
-        </div>
-        <div class="profile-role" style="color:#555; margin-top:3px;">
-          M.S. Computer Science, University of North Dakota (2024&ndash;2026)
-        </div>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></symbol>
+  </svg>
 
-        <div class="profile-meta">
-          <i class="fas fa-map-marker-alt"></i> Columbia, SC &nbsp;
-          <i class="fas fa-envelope" style="margin-left:8px;"></i>
-          <a href="mailto:asapkota79@outlook.com">asapkota79@outlook.com</a>
-        </div>
-
-        <div class="profile-links">
-          <a href="assets/file/Aditya_Sapkota_Resume.pdf" target="_blank">
-            <i class="fas fa-file-alt"></i> Resume
-          </a> &nbsp;|&nbsp;
-          <a href="https://www.linkedin.com/in/adityasapkota/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a> &nbsp;|&nbsp;
-          <a href="https://scholar.google.com/citations?user=67nh_tsAAAAJ&hl=en" target="_blank">
-            <i class="fab fa-google"></i> Google Scholar
-          </a> &nbsp;|&nbsp;
-          <a href="https://github.com/adityasapkota" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Aditya Sapkota — home">
+      <span class="brand-mark" aria-hidden="true">AS</span>
+      <span class="brand-name">Aditya Sapkota</span>
+    </a>
+    <nav class="nav" aria-label="In-page navigation">
+      <div class="nav-links">
+        <a class="nav-link" href="#about">about</a>
+        <a class="nav-link" href="#education">education</a>
+        <a class="nav-link" href="#experience">experience</a>
+        <a class="nav-link" href="#publications">research</a>
+        <a class="nav-link" href="#projects">projects</a>
+        <a class="nav-link" href="#skills">skills</a>
       </div>
-
-      <div class="col-12 col-md-3 profile-photo" style="padding-top:6px;">
-        <img src="assets/image/aditya-pp.png" alt="Aditya Sapkota, cybersecurity researcher at University of North Dakota">
-      </div>
-    </div>
+      <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Toggle theme">
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+      </button>
+    </nav>
   </header>
 
-  <hr class="custom-border" style="margin-top:20px;">
+  <main class="shell" id="top">
 
-  <!-- Nav -->
-  <nav class="navbar navbar-expand-sm main-nav" aria-label="Page sections">
-    <ul class="navbar-nav nav-fill w-100">
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-      <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-      <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#skills">Skills &amp; Certs</a></li>
-    </ul>
-  </nav>
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <p class="hero-kicker reveal-load" style="--d:.05s"><span class="dot"></span> Cyber Security &middot; Cloud &middot; ML Infrastructure</p>
+          <h1 class="hero-name reveal-load" style="--d:.12s">Aditya Sapkota</h1>
+          <p class="hero-tagline reveal-load" style="--d:.20s">Building ML that catches threats in <b>real infrastructure</b> — before they become incidents.</p>
 
-  <hr class="custom-border">
+          <ul class="hero-roles reveal-load" style="--d:.28s">
+            <li><strong>Graduate Research Assistant</strong>, <a href="https://und.edu/research/cyber-security/" target="_blank" rel="noopener">Center for Cyber Security Research, University of North Dakota</a></li>
+            <li><strong>AI &amp; Technology Intern</strong>, <a href="https://ndsbdc.org" target="_blank" rel="noopener">ND Small Business Development Center</a></li>
+            <li class="muted">M.S. Computer Science, University of North Dakota (2024&ndash;2026)</li>
+          </ul>
 
-  <main>
+          <p class="hero-meta reveal-load" style="--d:.36s">
+            <span><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg> Columbia, SC</span>
+            <a href="mailto:asapkota79@outlook.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> asapkota79@outlook.com</a>
+          </p>
+
+          <div class="hero-actions reveal-load" style="--d:.44s">
+            <a class="btn btn--primary" href="assets/file/Aditya_Sapkota_Resume.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg> Résumé
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/adityasapkota/" target="_blank" rel="noopener">
+              <svg class="icon icon--brand" aria-hidden="true"><use href="#i-linkedin"></use></svg> LinkedIn
+            </a>
+            <a class="btn" href="https://scholar.google.com/citations?user=67nh_tsAAAAJ&hl=en" target="_blank" rel="noopener">
+              <svg class="icon icon--brand" aria-hidden="true"><use href="#i-google"></use></svg> Google Scholar
+            </a>
+            <a class="btn" href="https://github.com/adityasapkota" target="_blank" rel="noopener">
+              <svg class="icon icon--brand" aria-hidden="true"><use href="#i-github"></use></svg> GitHub
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-photo reveal-load" style="--d:.20s">
+          <span class="frame">
+            <img src="assets/image/aditya-pp.png" width="461" height="461" decoding="async"
+                 alt="Aditya Sapkota, cybersecurity researcher at the University of North Dakota">
+          </span>
+          <figcaption>M.S. CS &middot; UND</figcaption>
+        </figure>
+      </div>
+    </section>
 
     <!-- About -->
-    <section class="section-block" id="about">
-      <h2 class="main_header"><a href="#about">About</a></h2>
-      <div class="about-text">
-        <p>
-          Computer Science graduate student at the <a href="https://und.edu" target="_blank">University of North Dakota</a>, researching cybersecurity at the <a href="https://und.edu/research/cyber-security/" target="_blank">Center for Cyber Security Research</a>. My current focus: federated learning and anomaly detection for edge infrastructure. The practical question I keep returning to is how to build ML models that catch threats in real infrastructure, before they become incidents.
-        </p>
-        <p>
-          Before grad school, I spent three and a half years at <a href="https://rapidcircle.com" target="_blank">RapidCircle</a> as a Cloud Engineer, deploying and running Microsoft 365 and Azure environments for enterprise clients across Europe and Asia-Pacific. That work shapes how I think about research — I care about what actually holds up in production.
-        </p>
-        <p>
-          Alongside my graduate work, I help North Dakota small businesses at the <a href="https://ndsbdc.org" target="_blank">ND SBDC</a> figure out what AI can realistically do for their operations. Originally from Nepal. Based in Columbia, SC.
-        </p>
-      </div>
-
-      <h4 class="sub_header" style="margin-top:20px; margin-bottom:10px;">Research Interests</h4>
-      <div>
-        <span class="interest-pill">Cyber Security</span>
-        <span class="interest-pill">Cloud Computing</span>
-        <span class="interest-pill">AIOps &amp; MLOps</span>
-        <span class="interest-pill">Anomaly Detection</span>
-        <span class="interest-pill">Federated Learning</span>
-        <span class="interest-pill">Agentic AI</span>
+    <section class="section" id="about" aria-labelledby="about-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">01</span>
+          <h2 class="section-label" id="about-label">About</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
+          <p class="lede reveal">
+            Computer Science graduate student at the <a href="https://und.edu" target="_blank" rel="noopener">University of North Dakota</a>, researching cybersecurity at the <a href="https://und.edu/research/cyber-security/" target="_blank" rel="noopener">Center for Cyber Security Research</a>. My current focus: federated learning and anomaly detection for edge infrastructure. The practical question I keep returning to is how to build ML models that catch threats in real infrastructure, before they become incidents.
+          </p>
+          <div class="prose reveal">
+            <p>
+              Before grad school, I spent three and a half years at <a href="https://rapidcircle.com" target="_blank" rel="noopener">RapidCircle</a> as a Cloud Engineer, deploying and running Microsoft 365 and Azure environments for enterprise clients across Europe and Asia-Pacific. That work shapes how I think about research — I care about what actually holds up in production.
+            </p>
+            <p>
+              Alongside my graduate work, I help North Dakota small businesses at the <a href="https://ndsbdc.org" target="_blank" rel="noopener">ND SBDC</a> figure out what AI can realistically do for their operations. Originally from Nepal. Based in Columbia, SC.
+            </p>
+          </div>
+          <div class="reveal">
+            <p class="subhead">Research Interests</p>
+            <div class="chip-row">
+              <span class="chip">Cyber Security</span>
+              <span class="chip">Cloud Computing</span>
+              <span class="chip">AIOps &amp; MLOps</span>
+              <span class="chip">Anomaly Detection</span>
+              <span class="chip">Federated Learning</span>
+              <span class="chip">Agentic AI</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <hr class="custom-border">
 
     <!-- Education -->
-    <section class="section-block" id="education">
-      <h2 class="main_header"><a href="#education">Education</a></h2>
-
-      <div class="edu-entry">
-        <div class="edu-degree">Master of Science in Computer Science</div>
-        <div class="edu-school">
-          <a href="https://und.edu" target="_blank">University of North Dakota</a>, Grand Forks, ND
+    <section class="section" id="education" aria-labelledby="education-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">02</span>
+          <h2 class="section-label" id="education-label">Education</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
+          <div class="edu-entry reveal">
+            <div class="edu-degree">Master of Science in Computer Science</div>
+            <div class="edu-school"><a href="https://und.edu" target="_blank" rel="noopener">University of North Dakota</a>, Grand Forks, ND</div>
+            <div class="edu-date">Aug 2024 &ndash; July 2026 (expected)</div>
+            <div class="edu-note">Graduate Research Assistant, Center for Cyber Security Research &middot; Advisor: Dr. Prakash Ranganathan</div>
+          </div>
+          <div class="edu-entry reveal">
+            <div class="edu-degree">Bachelor of Science in Computer Science and Information Technology</div>
+            <div class="edu-school">Tribhuvan University, Institute of Science and Technology, Kathmandu, Nepal</div>
+            <div class="edu-date">Nov 2014 &ndash; May 2020</div>
+          </div>
         </div>
-        <div class="edu-date">Aug 2024 &ndash; July 2026 (expected)</div>
-        <div class="edu-note">
-          Graduate Research Assistant, Center for Cyber Security Research &nbsp;&middot;&nbsp;
-          Advisor: Dr. Prakash Ranganathan
-        </div>
-      </div>
-
-      <div class="edu-entry" style="margin-bottom:0;">
-        <div class="edu-degree">Bachelor of Science in Computer Science and Information Technology</div>
-        <div class="edu-school">Tribhuvan University, Institute of Science and Technology, Kathmandu, Nepal</div>
-        <div class="edu-date">Nov 2014 &ndash; May 2020</div>
       </div>
     </section>
-
-    <hr class="custom-border">
 
     <!-- Experience -->
-    <section class="section-block" id="experience">
-      <h2 class="main_header"><a href="#experience">Experience</a></h2>
+    <section class="section" id="experience" aria-labelledby="experience-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">03</span>
+          <h2 class="section-label" id="experience-label">Experience</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
 
-      <div class="entry-card">
-        <div class="job-title">AI &amp; Technology Intern</div>
-        <div class="job-org">
-          <a href="https://ndsbdc.org" target="_blank">ND Small Business Development Center (ND SBDC)</a>
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">AI &amp; Technology Intern</div>
+                <div class="job-org"><a href="https://ndsbdc.org" target="_blank" rel="noopener">ND Small Business Development Center (ND SBDC)</a></div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Aug 2025 &ndash; Present</div>
+            </div>
+            <ul>
+              <li>Work with North Dakota small businesses to identify where AI tools can reduce manual work, and where they can't.</li>
+              <li>Build automations using Copilot Studio, Power Automate, and agentic AI pipelines tailored to each client's workflows.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Graduate Research Assistant</div>
+                <div class="job-org"><a href="https://und.edu/research/cyber-security/" target="_blank" rel="noopener">Center for Cyber Security Research, University of North Dakota</a></div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Aug 2024 &ndash; Present</div>
+            </div>
+            <ul>
+              <li>Researching federated learning for anomaly detection in edge infrastructure, using LSTM and BiLSTM models trained without centralizing sensitive data.</li>
+              <li>Mapped how physical disasters create exploitable cyber vulnerabilities in critical infrastructure (published at CARS 2025).</li>
+              <li>Four conference papers published in 2025 across FMEC, CARS, and NAPS.</li>
+              <li>Advised by Dr. Prakash Ranganathan, IEEE Senior Member and Director of the Cyber Security Research Center.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Cloud Engineer</div>
+                <div class="job-org"><a href="https://rapidcircle.com" target="_blank" rel="noopener">RapidCircle</a></div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Feb 2021 &ndash; Aug 2024 &middot; 3 yrs 7 mos</div>
+            </div>
+            <ul>
+              <li>Designed and managed Microsoft 365 and Azure environments for enterprise clients across Europe and Asia-Pacific, including full tenant migrations and hybrid configurations.</li>
+              <li>Built IAM policies using Entra ID, Intune, and Conditional Access across multi-tenant environments.</li>
+              <li>Ran IT service transitions for large-scale M365 migrations, owning SLAs and incident escalation from planning through go-live.</li>
+              <li>Managed network configurations across client infrastructure: SDN, VPN, DNS/DHCP, and firewall policies.</li>
+              <li>Automated infrastructure provisioning and compliance checks using Terraform, PowerShell, and GitHub Actions.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Computer Science Instructor</div>
+                <div class="job-org">New Summit College, Kathmandu, Nepal</div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Jan 2022 &ndash; Oct 2022</div>
+            </div>
+            <ul>
+              <li>Taught Cloud Computing, Computer Networking, and Operating Systems to 250+ undergraduates. 95% pass rate.</li>
+              <li>Ran hands-on labs on Azure, VMware ESXi, AWS, and GCP. Coached an Azure Fundamentals Bootcamp that certified 50+ students.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">IT Administrator</div>
+                <div class="job-org">Universal College, Nepal</div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Nov 2018 &ndash; Jan 2021</div>
+            </div>
+            <ul>
+              <li>Managed Windows Server infrastructure, network stack (DNS/DHCP, VPN, firewalls), and endpoint administration.</li>
+              <li>Owned Active Directory, user provisioning, and daily IT support for staff and students.</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="job-head">
+              <div>
+                <div class="job-title">Co-Founder &amp; Project Manager</div>
+                <div class="job-org">HammerLab Creations, Nepal</div>
+              </div>
+              <div class="job-date"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Jan 2016 &ndash; Nov 2020</div>
+            </div>
+            <ul>
+              <li>Co-founded a technology company and ran software delivery from scoping through deployment.</li>
+              <li>Managed multiple concurrent projects, coordinating a small team and keeping clients in the loop throughout.</li>
+            </ul>
+          </article>
+
         </div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Aug 2025 &ndash; Present</div>
-        <ul>
-          <li>Work with North Dakota small businesses to identify where AI tools can reduce manual work, and where they can't.</li>
-          <li>Build automations using Copilot Studio, Power Automate, and agentic AI pipelines tailored to each client's workflows.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <div class="job-title">Graduate Research Assistant</div>
-        <div class="job-org">
-          <a href="https://und.edu/research/cyber-security/" target="_blank">Center for Cyber Security Research, University of North Dakota</a>
-        </div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Aug 2024 &ndash; Present</div>
-        <ul>
-          <li>Researching federated learning for anomaly detection in edge infrastructure, using LSTM and BiLSTM models trained without centralizing sensitive data.</li>
-          <li>Mapped how physical disasters create exploitable cyber vulnerabilities in critical infrastructure (published at CARS 2025).</li>
-          <li>Four conference papers published in 2025 across FMEC, CARS, and NAPS.</li>
-          <li>Advised by Dr. Prakash Ranganathan, IEEE Senior Member and Director of the Cyber Security Research Center.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <div class="job-title">Cloud Engineer</div>
-        <div class="job-org">
-          <a href="https://rapidcircle.com" target="_blank">RapidCircle</a>
-        </div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Feb 2021 &ndash; Aug 2024 &nbsp;&middot;&nbsp; 3 yrs 7 mos</div>
-        <ul>
-          <li>Designed and managed Microsoft 365 and Azure environments for enterprise clients across Europe and Asia-Pacific, including full tenant migrations and hybrid configurations.</li>
-          <li>Built IAM policies using Entra ID, Intune, and Conditional Access across multi-tenant environments.</li>
-          <li>Ran IT service transitions for large-scale M365 migrations, owning SLAs and incident escalation from planning through go-live.</li>
-          <li>Managed network configurations across client infrastructure: SDN, VPN, DNS/DHCP, and firewall policies.</li>
-          <li>Automated infrastructure provisioning and compliance checks using Terraform, PowerShell, and GitHub Actions.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <div class="job-title">Computer Science Instructor</div>
-        <div class="job-org">New Summit College, Kathmandu, Nepal</div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Jan 2022 &ndash; Oct 2022</div>
-        <ul>
-          <li>Taught Cloud Computing, Computer Networking, and Operating Systems to 250+ undergraduates. 95% pass rate.</li>
-          <li>Ran hands-on labs on Azure, VMware ESXi, AWS, and GCP. Coached an Azure Fundamentals Bootcamp that certified 50+ students.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <div class="job-title">IT Administrator</div>
-        <div class="job-org">Universal College, Nepal</div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Nov 2018 &ndash; Jan 2021</div>
-        <ul>
-          <li>Managed Windows Server infrastructure, network stack (DNS/DHCP, VPN, firewalls), and endpoint administration.</li>
-          <li>Owned Active Directory, user provisioning, and daily IT support for staff and students.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <div class="job-title">Co-Founder &amp; Project Manager</div>
-        <div class="job-org">HammerLab Creations, Nepal</div>
-        <div class="job-date"><i class="far fa-calendar-alt"></i> Jan 2016 &ndash; Nov 2020</div>
-        <ul>
-          <li>Co-founded a technology company and ran software delivery from scoping through deployment.</li>
-          <li>Managed multiple concurrent projects, coordinating a small team and keeping clients in the loop throughout.</li>
-        </ul>
       </div>
     </section>
-
-    <hr class="custom-border">
 
     <!-- Publications -->
-    <section class="section-block" id="publications">
-      <h2 class="main_header"><a href="#publications">Research &amp; Publications</a></h2>
-      <p class="scholar-summary">
-        <a href="https://scholar.google.com/citations?user=67nh_tsAAAAJ&hl=en" target="_blank">
-          <i class="fab fa-google"></i> Google Scholar
-        </a>
-        &nbsp;&middot;&nbsp; 1 citation &nbsp;&middot;&nbsp; h-index: 1 &nbsp;&middot;&nbsp; 4 papers (2025)
-      </p>
+    <section class="section" id="publications" aria-labelledby="publications-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">04</span>
+          <h2 class="section-label" id="publications-label">Research</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
+          <p class="scholar-line reveal">
+            <a href="https://scholar.google.com/citations?user=67nh_tsAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon icon--brand" aria-hidden="true"><use href="#i-google"></use></svg> Google Scholar</a>
+            <span class="sep">/</span> 1 citation
+            <span class="sep">/</span> h-index: 1
+            <span class="sep">/</span> 4 papers (2025)
+          </p>
 
-      <div class="pub-entry">
-        <div class="pub-title">
-          Enhancing Edge Infrastructure Security Through FL-Driven LSTM/BiLSTM Anomaly Detection
-          <span class="pub-badge">1 citation</span>
+          <div class="pub reveal">
+            <div class="pub-num">[1]</div>
+            <div class="pub-title">Enhancing Edge Infrastructure Security Through FL-Driven LSTM/BiLSTM Anomaly Detection <span class="badge">1 citation</span></div>
+            <div class="pub-authors">MH Karim, <strong>A Sapkota</strong>, C Lei, P Ranganathan</div>
+            <div class="pub-venue">10th International Conference on Fog and Mobile Edge Computing (FMEC), 2025</div>
+          </div>
+
+          <div class="pub reveal">
+            <div class="pub-num">[2]</div>
+            <div class="pub-title">When Disasters Trigger Cyber Vulnerabilities: Mapping Physical-Digital Interdependencies in Critical Infrastructure Systems</div>
+            <div class="pub-authors">D Panta, S Wang, <strong>A Sapkota</strong>, P Ranganathan</div>
+            <div class="pub-venue">Cyber Awareness and Research Symposium (CARS), 2025</div>
+          </div>
+
+          <div class="pub reveal">
+            <div class="pub-num">[3]</div>
+            <div class="pub-title">Spectrogram-Based Gunshot Detection Using Machine Learning Model</div>
+            <div class="pub-authors">D Agyapong, <strong>A Sapkota</strong>, P Ranganathan</div>
+            <div class="pub-venue">Cyber Awareness and Research Symposium (CARS), 2025</div>
+          </div>
+
+          <div class="pub reveal">
+            <div class="pub-num">[4]</div>
+            <div class="pub-title">Artificial Intelligence Models for Liquefied Natural Gas Forecasting</div>
+            <div class="pub-authors">JS Kumaran, <strong>A Sapkota</strong>, P Ranganathan, H Salehfar</div>
+            <div class="pub-venue">57th North American Power Symposium (NAPS), 2025</div>
+          </div>
         </div>
-        <div class="pub-authors">MH Karim, <strong>A Sapkota</strong>, C Lei, P Ranganathan</div>
-        <div class="pub-venue">10th International Conference on Fog and Mobile Edge Computing (FMEC), 2025</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">When Disasters Trigger Cyber Vulnerabilities: Mapping Physical-Digital Interdependencies in Critical Infrastructure Systems</div>
-        <div class="pub-authors">D Panta, S Wang, <strong>A Sapkota</strong>, P Ranganathan</div>
-        <div class="pub-venue">Cyber Awareness and Research Symposium (CARS), 2025</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">Spectrogram-Based Gunshot Detection Using Machine Learning Model</div>
-        <div class="pub-authors">D Agyapong, <strong>A Sapkota</strong>, P Ranganathan</div>
-        <div class="pub-venue">Cyber Awareness and Research Symposium (CARS), 2025</div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-title">Artificial Intelligence Models for Liquefied Natural Gas Forecasting</div>
-        <div class="pub-authors">JS Kumaran, <strong>A Sapkota</strong>, P Ranganathan, H Salehfar</div>
-        <div class="pub-venue">57th North American Power Symposium (NAPS), 2025</div>
       </div>
     </section>
-
-    <hr class="custom-border">
 
     <!-- Projects -->
-    <section class="section-block" id="projects">
-      <h2 class="main_header"><a href="#projects">Projects</a></h2>
+    <section class="section" id="projects" aria-labelledby="projects-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">05</span>
+          <h2 class="section-label" id="projects-label">Projects</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
+          <div class="proj-grid">
 
-      <div class="entry-card">
-        <div class="job-title">
-          <i class="fas fa-server" style="color:#0b5394; margin-right:7px; font-size:14px;"></i>AI Home Lab &mdash; Hybrid Infrastructure
-        </div>
-        <ul>
-          <li>Self-hosted hybrid AI environment: local LLMs via Ollama, vector search with pgvector, connected to Azure and AWS for compute burst.</li>
-        </ul>
-        <div class="entry-tech"><strong>Stack:</strong> Docker, Kubernetes, VMware, Azure, AWS, Python, MCP</div>
-      </div>
+            <article class="proj reveal">
+              <div class="proj-icon"><svg class="icon" aria-hidden="true"><use href="#i-server"></use></svg></div>
+              <h3 class="proj-title">AI Home Lab — Hybrid Infrastructure</h3>
+              <p class="proj-desc">Self-hosted hybrid AI environment: local LLMs via Ollama, vector search with pgvector, connected to Azure and AWS for compute burst.</p>
+              <p class="proj-tech">Docker · Kubernetes · VMware · Azure · AWS · Python · MCP</p>
+            </article>
 
-      <div class="entry-card">
-        <div class="job-title">
-          <i class="fas fa-brain" style="color:#0b5394; margin-right:7px; font-size:14px;"></i>AI Market Intelligence Repository
-        </div>
-        <ul>
-          <li>Built a RAG pipeline that pulls market data from multiple sources and surfaces answers through a chat interface.</li>
-        </ul>
-        <div class="entry-tech"><strong>Stack:</strong> Python, pgvector, Microsoft Fabric, Foundry, Claude API, Agentic AI</div>
-      </div>
+            <article class="proj reveal">
+              <div class="proj-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg></div>
+              <h3 class="proj-title">AI Market Intelligence Repository</h3>
+              <p class="proj-desc">Built a RAG pipeline that pulls market data from multiple sources and surfaces answers through a chat interface.</p>
+              <p class="proj-tech">Python · pgvector · Microsoft Fabric · Foundry · Claude API · Agentic AI</p>
+            </article>
 
-      <div class="entry-card">
-        <div class="job-title">
-          <i class="fas fa-shield-alt" style="color:#0b5394; margin-right:7px; font-size:14px;"></i>Multi-Cloud Anomaly Detection Framework
-        </div>
-        <ul>
-          <li>Built an anomaly detection system across Azure and AWS using ML-based log analysis, integrated with native cloud monitoring.</li>
-        </ul>
-        <div class="entry-tech"><strong>Stack:</strong> Python, PyTorch, Azure Monitor, AWS CloudWatch, MLOps pipelines</div>
-      </div>
+            <article class="proj reveal">
+              <div class="proj-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></div>
+              <h3 class="proj-title">Multi-Cloud Anomaly Detection Framework</h3>
+              <p class="proj-desc">Built an anomaly detection system across Azure and AWS using ML-based log analysis, integrated with native cloud monitoring.</p>
+              <p class="proj-tech">Python · PyTorch · Azure Monitor · AWS CloudWatch · MLOps</p>
+            </article>
 
-      <div class="entry-card">
-        <div class="job-title">
-          <i class="fas fa-lock" style="color:#0b5394; margin-right:7px; font-size:14px;"></i>Cloud Security Hardening Framework
-        </div>
-        <ul>
-          <li>Automated NIST-aligned security hardening and compliance checks for enterprise cloud tenants, from baseline assessment to remediation.</li>
-        </ul>
-        <div class="entry-tech"><strong>Stack:</strong> Terraform, PowerShell, Azure Policy, GitHub Actions, Microsoft Defender</div>
-      </div>
+            <article class="proj reveal">
+              <div class="proj-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg></div>
+              <h3 class="proj-title">Cloud Security Hardening Framework</h3>
+              <p class="proj-desc">Automated NIST-aligned security hardening and compliance checks for enterprise cloud tenants, from baseline assessment to remediation.</p>
+              <p class="proj-tech">Terraform · PowerShell · Azure Policy · GitHub Actions · MS Defender</p>
+            </article>
 
-      <div class="entry-card">
-        <div class="job-title">
-          <i class="fas fa-exchange-alt" style="color:#0b5394; margin-right:7px; font-size:14px;"></i>Service Transition for Global IT Operations
+            <article class="proj reveal">
+              <div class="proj-icon"><svg class="icon" aria-hidden="true"><use href="#i-branch"></use></svg></div>
+              <h3 class="proj-title">Service Transition for Global IT Operations</h3>
+              <p class="proj-desc">Led migration of enterprise clients to Microsoft 365 and Azure, managing SLAs, runbooks, and stakeholder communication from planning through go-live.</p>
+              <p class="proj-tech">Microsoft 365 · Azure · ServiceNow · TOPdesk · Power Automate</p>
+            </article>
+
+          </div>
         </div>
-        <ul>
-          <li>Led migration of enterprise clients to Microsoft 365 and Azure, managing SLAs, runbooks, and stakeholder communication from planning through go-live.</li>
-        </ul>
-        <div class="entry-tech"><strong>Stack:</strong> Microsoft 365, Azure, ServiceNow, TOPdesk, Power Automate</div>
       </div>
     </section>
 
-    <hr class="custom-border">
-
     <!-- Skills & Certifications -->
-    <section class="section-block" id="skills">
-      <h2 class="main_header"><a href="#skills">Skills &amp; Certifications</a></h2>
+    <section class="section" id="skills" aria-labelledby="skills-label">
+      <div class="section-grid">
+        <aside class="section-aside">
+          <span class="section-index" aria-hidden="true">06</span>
+          <h2 class="section-label" id="skills-label">Skills &amp; Certs</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </aside>
+        <div class="section-body">
+          <div class="skills-grid">
 
-      <div class="row" style="margin-top:18px;">
-        <div class="col-md-6">
-
-          <div class="skill-group">
-            <div class="skill-group-label">Infrastructure &amp; Cloud</div>
-            <span class="skill-badge">Windows Server</span>
-            <span class="skill-badge">Linux</span>
-            <span class="skill-badge">Microsoft Azure</span>
-            <span class="skill-badge">AWS</span>
-            <span class="skill-badge">Google Cloud</span>
-            <span class="skill-badge">Microsoft 365</span>
-            <span class="skill-badge">Intune</span>
-            <span class="skill-badge">VMware ESXi</span>
-            <span class="skill-badge">Docker</span>
-            <span class="skill-badge">Kubernetes</span>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-group-label">Networking &amp; Security</div>
-            <span class="skill-badge">DNS/DHCP</span>
-            <span class="skill-badge">VPN</span>
-            <span class="skill-badge">Firewalls</span>
-            <span class="skill-badge">SDN</span>
-            <span class="skill-badge">Active Directory</span>
-            <span class="skill-badge">Entra ID</span>
-            <span class="skill-badge">IAM</span>
-            <span class="skill-badge">NIST Frameworks</span>
-            <span class="skill-badge">Vulnerability Management</span>
-            <span class="skill-badge">FERPA</span>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-group-label">Automation &amp; Development</div>
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">PowerShell</span>
-            <span class="skill-badge">SQL</span>
-            <span class="skill-badge">Terraform</span>
-            <span class="skill-badge">GitHub Actions</span>
-            <span class="skill-badge">Power Automate</span>
-            <span class="skill-badge">MLOps</span>
-          </div>
-
-        </div>
-        <div class="col-md-6">
-
-          <div class="skill-group">
-            <div class="skill-group-label">Data &amp; AI</div>
-            <span class="skill-badge">PyTorch</span>
-            <span class="skill-badge">pgvector</span>
-            <span class="skill-badge">Microsoft Fabric</span>
-            <span class="skill-badge">RAG</span>
-            <span class="skill-badge">Agentic AI</span>
-            <span class="skill-badge">Copilot Studio</span>
-            <span class="skill-badge">Claude Code</span>
-            <span class="skill-badge">MCP</span>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-group-label">Service Management</div>
-            <span class="skill-badge">ServiceNow</span>
-            <span class="skill-badge">TOPdesk</span>
-            <span class="skill-badge">SLA Management</span>
-            <span class="skill-badge">Root Cause Analysis</span>
-            <span class="skill-badge">IT Service Transition</span>
-          </div>
-
-          <div class="skill-group">
-            <div class="skill-group-label">Certifications</div>
-            <div class="cert-item">
-              <span class="cert-icon"><i class="fab fa-microsoft"></i></span>
-              <span>Microsoft 365 Certified: Administrator Expert</span>
+            <div class="skill-group reveal">
+              <p class="subhead">Infrastructure &amp; Cloud</p>
+              <div class="chip-row">
+                <span class="chip chip--skill">Windows Server</span>
+                <span class="chip chip--skill">Linux</span>
+                <span class="chip chip--skill">Microsoft Azure</span>
+                <span class="chip chip--skill">AWS</span>
+                <span class="chip chip--skill">Google Cloud</span>
+                <span class="chip chip--skill">Microsoft 365</span>
+                <span class="chip chip--skill">Intune</span>
+                <span class="chip chip--skill">VMware ESXi</span>
+                <span class="chip chip--skill">Docker</span>
+                <span class="chip chip--skill">Kubernetes</span>
+              </div>
             </div>
-            <div class="cert-item">
-              <span class="cert-icon"><i class="fab fa-aws"></i></span>
-              <span>AWS Certified</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon"><i class="fab fa-google"></i></span>
-              <span>Google Cloud Certified</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon"><i class="fas fa-shield-alt"></i></span>
-              <span>ISC2 Certified in Cybersecurity (CC)</span>
-            </div>
-            <div class="cert-item" style="color:#888; font-size:13px;">
-              <span class="cert-icon"><i class="fas fa-plus-circle" style="color:#aaa;"></i></span>
-              <span>5 additional Microsoft, cloud, and security certifications</span>
-            </div>
-          </div>
 
+            <div class="skill-group reveal">
+              <p class="subhead">Networking &amp; Security</p>
+              <div class="chip-row">
+                <span class="chip chip--skill">DNS/DHCP</span>
+                <span class="chip chip--skill">VPN</span>
+                <span class="chip chip--skill">Firewalls</span>
+                <span class="chip chip--skill">SDN</span>
+                <span class="chip chip--skill">Active Directory</span>
+                <span class="chip chip--skill">Entra ID</span>
+                <span class="chip chip--skill">IAM</span>
+                <span class="chip chip--skill">NIST Frameworks</span>
+                <span class="chip chip--skill">Vulnerability Mgmt</span>
+                <span class="chip chip--skill">FERPA</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <p class="subhead">Automation &amp; Development</p>
+              <div class="chip-row">
+                <span class="chip chip--skill">Python</span>
+                <span class="chip chip--skill">PowerShell</span>
+                <span class="chip chip--skill">SQL</span>
+                <span class="chip chip--skill">Terraform</span>
+                <span class="chip chip--skill">GitHub Actions</span>
+                <span class="chip chip--skill">Power Automate</span>
+                <span class="chip chip--skill">MLOps</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <p class="subhead">Data &amp; AI</p>
+              <div class="chip-row">
+                <span class="chip chip--skill">PyTorch</span>
+                <span class="chip chip--skill">pgvector</span>
+                <span class="chip chip--skill">Microsoft Fabric</span>
+                <span class="chip chip--skill">RAG</span>
+                <span class="chip chip--skill">Agentic AI</span>
+                <span class="chip chip--skill">Copilot Studio</span>
+                <span class="chip chip--skill">Claude Code</span>
+                <span class="chip chip--skill">MCP</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <p class="subhead">Service Management</p>
+              <div class="chip-row">
+                <span class="chip chip--skill">ServiceNow</span>
+                <span class="chip chip--skill">TOPdesk</span>
+                <span class="chip chip--skill">SLA Management</span>
+                <span class="chip chip--skill">Root Cause Analysis</span>
+                <span class="chip chip--skill">IT Service Transition</span>
+              </div>
+            </div>
+
+            <div class="skill-group reveal">
+              <p class="subhead">Certifications</p>
+              <ul class="cert-list">
+                <li class="cert-item"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg> Microsoft 365 Certified: Administrator Expert</li>
+                <li class="cert-item"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg> AWS Certified</li>
+                <li class="cert-item"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg> Google Cloud Certified</li>
+                <li class="cert-item"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> ISC2 Certified in Cybersecurity (CC)</li>
+                <li class="cert-item more"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> 5 additional Microsoft, cloud, and security certifications</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    Aditya Sapkota &nbsp;&middot;&nbsp; Last updated April 2026 &nbsp;&middot;&nbsp;
-    <a href="mailto:asapkota79@outlook.com">asapkota79@outlook.com</a> &nbsp;&middot;&nbsp;
-    <a href="https://www.linkedin.com/in/adityasapkota/" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div class="footer-meta">
+        <span>Aditya Sapkota</span>
+        <span class="sep">/</span>
+        <span>Last updated June 2026</span>
+        <span class="sep">/</span>
+        <a href="mailto:asapkota79@outlook.com">asapkota79@outlook.com</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/adityasapkota" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon icon--brand" aria-hidden="true"><use href="#i-github"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/adityasapkota/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="icon icon--brand" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+        </a>
+        <a class="to-top" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-up"></use></svg> top</a>
+      </div>
+    </div>
   </footer>
 
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener("click", function (e) {
-        var target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-          history.pushState(null, null, this.getAttribute("href"));
-        }
-      });
-    });
-  });
-</script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
